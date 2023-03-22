@@ -1,0 +1,55 @@
+.nav {
+    // @extend %flexbox;
+    @include setFlexbox(space-between);
+    @include setSize(87%, 0 auto);
+
+    &_logo{
+        font-size: 34px;
+        color: $primaryWhite;
+    }
+
+    &_navbar{
+        @include setFlexbox(space-around);
+        width: 50%;
+        list-style: none;
+
+        li{
+            height: 40px;
+            line-height: 40px;
+
+
+        }
+
+        li::after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 3px;
+            border-color: red;
+            transform: translateY();
+        }
+
+        a{
+            color: $primaryWhite;
+            text-decoration: none;
+            transition: all 0.3s linear;
+
+            &:hover{
+                color: $primaryHover;
+            }
+        }
+    }
+}
+
+.container{
+    @include setFlexbox(space-between);
+    @include setSize(87%, 100px auto );
+
+    .col{
+        width: 30%;
+        border-radius: 20px;
+        background-color: $primaryBalck;
+        height: 250px;
+    }
+}
+

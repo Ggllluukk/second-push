@@ -1,0 +1,18 @@
+$primaryBalck: #252525;
+$primaryWhite: #ffffffff;
+$primaryHover: tomato;
+
+%flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin setFlexbox($space) {
+    display: flex;
+    justify-content: $space;
+}
+
+@mixin setSize($width, $margin){
+    width: $width;
+    margin: $margin;
+}
